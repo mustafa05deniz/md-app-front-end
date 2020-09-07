@@ -1,0 +1,72 @@
+<!--
+  <nav id="sidebar" class="navbar-light bg-light " [ngClass]="{'hidden': SidenavService.sideNav }">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/panel/dashboard" href="#">Home page</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/panel/categories">Categories</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/panel/users">Users</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/panel/posts">Posts</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/panel/settings">Settings</a>
+      </li>
+
+    </ul>
+  </nav>
+
+
+  <nav id="sidebar" class="navbar-light bg-light " [ngClass]="{'hidden': SidenavService.sideNav }">
+
+  <a mat-list-item [ngStyle]="{'padding-left': (depth * 12) + 'px'}" *ngFor="let item of navItems"
+    (click)="onItemSelected(item)"
+    [ngClass]="{'active': item.route ? router.isActive(item.route, true): false, 'expanded': expanded}"
+    class="menu-list-item">
+    <mat-icon class="routeIcon">{{item.iconName}}</mat-icon>
+    {{item.displayName}}
+    <span fxFlex *ngIf="item.children && item.children.length">
+      <span fxFlex></span>
+      <mat-icon [@indicatorRotate]="expanded ? 'expanded': 'collapsed'">
+        expand_more
+      </mat-icon>
+    </span>
+    <div *ngIf="expanded">
+      <div *ngFor="let child of item.children"  >
+        {{child.displayName}}
+      </div>
+    </div>
+    
+  </a>
+
+
+
+</nav>
+
+
+
+
+-->
+
+
+
+
+
+<!--
+
+<mat-nav-list id="sidebar" [ngClass]="{'hidden': navService.sideNav }">
+  <app-menu-list *ngFor="let item of navItems" [item]="item"></app-menu-list>
+</mat-nav-list>
+
+
+-->
+
+
+<mat-nav-list id="sidebar" [ngClass]="{'hidden': navService.sideNav }">
+  <app-menu-list-item *ngFor="let item of navItems" [item]="item"></app-menu-list-item>
+  <div class="version">version 1.3.6</div>
+</mat-nav-list>

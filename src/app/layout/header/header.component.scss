@@ -1,0 +1,18 @@
+@import "../../../styles.scss";
+.header{
+    background-color: $header-bg-color;
+    width: 100%;
+    display: flex;
+    padding: 14px;
+    align-items: center;
+    justify-content: space-between;
+    color:$header-nav-a-color;
+    .brand{
+        margin-left: 10px;
+    }
+    .logo{
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+}

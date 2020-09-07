@@ -1,0 +1,39 @@
+<div class="login">
+    <div class="welcome">
+        <p>Welcome Md Register Page</p>
+        <div class="small"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+            into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+            release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+            software like Aldus PageMaker including versions of Lorem Ipsum. </div>
+    </div>
+    <div class="panel">
+        <form class="example-form" [formGroup]="signUpForm">
+            <div class="img">
+                <img src="../../../assets/md-codes.png" width="200px">
+            </div>
+            <mat-form-field class="example-full-width">
+                <mat-label>Email</mat-label>
+                <input matInput placeholder="Ex. Pizza" value="mustafa05deniz@gmail.com">
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+                <mat-label>Password</mat-label>
+                <input matInput placeholder="Ex. Pizza" type="password" value="123456789">
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+                <mat-label>Re Password</mat-label>
+                <input matInput placeholder="Ex. Pizza" type="password" value="123456789">
+            </mat-form-field>
+            <button mat-raised-button="primary" (click)="signUp()" [disabled]="this.signUpForm.invalid">Signup</button>
+            <div class="signup">
+                <p>Already have account ? </p>
+                <button mat-button="primary" [routerLink]="['/auth/login']">Login</button>
+            </div>
+        </form>
+
+
+    </div>
+</div>

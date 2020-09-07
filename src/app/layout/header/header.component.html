@@ -1,0 +1,20 @@
+<nav class="header">
+    <div class="logo">
+        <span class="material-icons" (click)="SidenavService.toogle()">
+            dehaze
+        </span>
+        <div class="brand">BRAND</div>
+    </div>
+    <div class="user">
+        <div class="btn-group">
+            <button type="button btn-sm" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+             Mustafa Deniz
+            </button>
+            <div class="dropdown-menu dropdown-menu-right">
+              <button class="dropdown-item" type="button" [routerLink]="['/panel/profile']" routerLinkActive="router-link-active" >Profile</button>
+              <button class="dropdown-item" type="button" (click)="logOut()">Log out</button>
+            </div>
+          </div>
+
+    </div>
+</nav>

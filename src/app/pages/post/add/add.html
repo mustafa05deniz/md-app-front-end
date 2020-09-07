@@ -1,0 +1,34 @@
+<form class="example-form" [formGroup]="postForm">
+    <mat-form-field appearance="outline" floatLabel="always" class="w-100-p">
+        <mat-label>Title</mat-label>
+        <input matInput formControlName="title" placeholder="Ex. Tesla Model S Speed" value="mustafa05deniz@gmail.com">
+    </mat-form-field>
+
+    <ckeditor  [config]="ckconfig" [editor]="Editor" formControlName="text" [data]="editorData"></ckeditor><br>
+    <mat-form-field appearance="outline" floatLabel="always" class="w-100-p">
+        <mat-label>Summary</mat-label>
+        <input matInput formControlName="summary" placeholder="Max 30 Character" >
+    </mat-form-field>
+    <mat-form-field  appearance="outline" floatLabel="always" class="w-100-p">
+        <mat-label>Category</mat-label>
+        <mat-select placeholder="Cars" formControlName="category">
+            <mat-option *ngFor="let cat of this.category" value="{{cat.id}}">{{cat.name}}</mat-option>
+
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field  appearance="outline" floatLabel="always" class="w-100-p">
+        <mat-label>Author</mat-label>
+        <mat-select placeholder="Ex Mustafa Deniz" formControlName="author">
+            <mat-option *ngFor="let author of this.userList" value="{{author._id}}">{{author.name}}</mat-option>
+
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="outline" floatLabel="always" class="w-100-p">
+        <mat-label>Image Link</mat-label>
+        <input matInput formControlName="img" placeholder="Image Link" >
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="addPost()" [disabled]="this.postForm.invalid">
+        Add Post
+    </button>
+
+</form>

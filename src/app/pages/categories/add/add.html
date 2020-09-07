@@ -1,0 +1,16 @@
+<form class="example-form" [formGroup]="categoryForm">
+    <mat-form-field appearance="outline" floatLabel="always" class="w-100-p">
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name" placeholder="Ex : News" >
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" floatLabel="always" class="w-100-p">
+        <mat-label>No</mat-label>
+        <input matInput formControlName="no" placeholder="Ex : 10 , it must be a unique" >
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" (click)="addPost()" [disabled]="this.categoryForm.invalid">
+        Add Category
+    </button>
+
+</form>

@@ -1,0 +1,125 @@
+
+
+// only change those variables // only change those variables // only change those variables // only change those variables // only change those variables 
+
+
+
+$sidebar-bg-color: var(--sidebar-bg-color,#434242);
+$side-navigation-bg : var(--side-navigation-bg,#f3eff3);
+$sidebar-hover: var(--sidebar-hover-color,#879da7);
+$sidebar-active-li-bg-color: var(--sidebar-active-li-bg-color,#8d868d);
+$sidebar-color:var(--sidebar-color,#ffffff);
+$header-bg-color:var(--header-bg-color,#434242);
+$header-nav-a-color:var(--header-nav-a-color,#ffffff);
+
+
+// only change those variables // only change those variables // only change those variables // only change those variables // only change those variables 
+
+
+
+html{
+  height: 100%;
+}
+body {
+  font-size: .875rem;
+  height: 100%;
+}
+
+
+
+
+.card-w-o-h{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  min-height: 200px;
+  .card-header{
+    visibility: hidden;
+  }
+  .key{
+    margin-top: 14px;
+    color: gray;
+    font-size: 17px;
+  }
+  .value{
+    font-size: 20px;
+  }
+  .link{
+    cursor: pointer;
+  }
+  
+}
+
+
+.card-w-h{
+  display: flex;
+  flex-direction: column;
+  min-height: 200px;
+  padding: 10%;
+  .header{
+    display: flex;
+    justify-content: space-between;
+    .head{
+      font-size: 17px;
+      font-weight: 200;
+    }
+    .link{
+      cursor: pointer;
+    }
+  }
+
+  .key{
+    visibility: hidden;
+  }
+  .value{
+    font-size: 16px;
+  }
+  
+}
+
+.card-w-h-img{
+  display: flex;
+  flex-direction: column-reverse;
+  .header{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    align-items: center;
+    .head{
+      font-style: italic;
+      font-weight: 300;
+    }
+    .link{
+      cursor: pointer;
+    }
+  }
+  .img{
+    width: 100%;
+    img{
+      width: 100%;
+    }
+  }
+  
+}
+.dark{
+  background-color: #434242;
+}
+
+.white{
+  color:white;
+}
+
+
+
+
+
+.md-shadow{
+  -webkit-box-shadow: 0px -1px 7px -1px rgba(201,195,201,1);
+  -moz-box-shadow: 0px -1px 7px -1px rgba(201,195,201,1);
+  box-shadow: 0px -1px 7px -1px rgba(201,195,201,1);
+}

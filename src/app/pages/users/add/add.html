@@ -1,0 +1,32 @@
+<form class="example-form" [formGroup]="userForm">
+    <mat-form-field appearance="outline" floatLabel="always" class="w-100-p">
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name" placeholder="Ex. Mustafa Deniz">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" floatLabel="always" class="w-100-p">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" placeholder="Ex.  mustafa05deniz@gmail.com">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" floatLabel="always" class="w-100-p">
+        <mat-label>Linkedin</mat-label>
+        <input matInput formControlName="linkedin" placeholder="Ex. Mustafa Deniz">
+    </mat-form-field>
+    <mat-form-field appearance="outline" floatLabel="always" class="w-100-p">
+        <mat-label>Role</mat-label>
+        <mat-select placeholder="Role" formControlName="role">
+            <mat-option *ngFor="let role of this.roles" value="{{role.type}}">{{role.name}}</mat-option>
+
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" floatLabel="always" class="w-100-p">
+        <mat-label>Password</mat-label>
+        <input matInput formControlName="password" type="password" placeholder="Ex.  123456789">
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="addNewUser()" [disabled]="this.userForm.invalid">
+        Add New User
+    </button>
+
+</form>

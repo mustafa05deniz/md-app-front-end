@@ -1,0 +1,109 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                Change Theme Colors
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-3">
+                        <span [style.background]="arrayColors[selectedColor]" [cpToggle]="true"
+                            [cpDialogDisplay]="'inline'" [cpCancelButton]="true"
+                            (colorPickerChange)="onChangeColor($event)" [cpCancelButtonClass]="'btn btn-primary btn-xs'"
+                            [(colorPicker)]="arrayColors[selectedColor]"></span>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="row color">
+                            <div class="col-md-3 color-name">
+
+                                Header Background Color
+                            </div>
+                            <div class="col-md-9">
+                                <div class="color-box" [style.background]="arrayColors['header_bg_color']"
+                                    (click)="selectedColor='header_bg_color';">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row color">
+                            <div class="col-md-3 color-name">
+
+                                Header Navigation link color
+                            </div>
+                            <div class="col-md-9">
+                                <div class="color-box" [style.background]="arrayColors['header_nav_a_color']"
+                                    (click)="selectedColor='header_nav_a_color';">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row color">
+                            <div class="col-md-3 color-name">
+
+                                Sidebar Background Color
+                            </div>
+                            <div class="col-md-9">
+                                <div class="color-box" [style.background]="arrayColors['sidebar_bg_color']"
+                                    (click)="selectedColor='sidebar_bg_color'">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row color">
+                            <div class="col-md-3 color-name">
+
+                                Sidebar Active Bg Color
+                            </div>
+                            <div class="col-md-9">
+                                <div class="color-box" [style.background]="arrayColors['sidebar_active_li_bg_color']"
+                                    (click)="selectedColor='sidebar_active_li_bg_color'">
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row color">
+                            <div class="col-md-3 color-name">
+
+                                Sidebar Color
+                            </div>
+                            <div class="col-md-9">
+                                <div class="color-box" [style.background]="arrayColors['sidebar_color']"
+                                    (click)="selectedColor='sidebar_color'">
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div><br>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                Copy this code and paste own styles.scss file
+                            </div>
+                            <div class="card-body">
+                                <pre>
+// only change those variables // only change those variables // only change those variables // only change those variables // only change those variables 
+
+
+$sidebar-bg-color: {{arrayColors['sidebar_bg_color']}};
+$side-navigation-bg : {{arrayColors['side_navigation_bg_color']}};
+$sidebar-active-li-bg-color: {{arrayColors['sidebar_active_li_bg_color']}};
+$sidebar-color:{{arrayColors['sidebar_li_color']}};
+$header-bg-color:{{arrayColors['header_bg_color']}};
+$header-nav-a-color:{{arrayColors['header_nav_a_color']}};
+
+// only change those variables // only change those variables // only change those variables // only change those variables // only change those variables 
+
+                                          </pre>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

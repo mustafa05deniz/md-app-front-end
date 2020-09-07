@@ -1,0 +1,24 @@
+<main role="main">
+
+    <div class="md-table">
+
+        <dx-data-grid class="dx-card wide-card" [dataSource]="dataSource" [showBorders]="true" [focusedRowIndex]="0"
+            [columnAutoWidth]="true" [columnHidingEnabled]="true" [showRowLines]="true">
+            <dxo-paging [pageSize]="10"></dxo-paging>
+            <dxo-pager [showPageSizeSelector]="true" [allowedPageSizes]="[5, 10, 20]" [showInfo]="true">
+            </dxo-pager>
+            <dxo-filter-row [visible]="true"></dxo-filter-row>
+            <dxi-column dataField="title" caption="Title"></dxi-column>
+            <dxi-column dataField="text" caption="Text"></dxi-column>
+            <dxi-column dataField="summary"  caption="Summary"></dxi-column>
+            <dxi-column cellTemplate="img" caption="IMG"></dxi-column>
+          
+            <div *dxTemplate="let data of 'img'">
+               <img src="{{data.data.img}}">
+            </div>
+            <dxi-column dataField="createdDate" caption="createdDate" Date></dxi-column>
+        </dx-data-grid>
+    </div>
+
+
+</main>
