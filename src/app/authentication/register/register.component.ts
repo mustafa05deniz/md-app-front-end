@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { MyAuthService } from '../../../services/my-auth.service';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -8,9 +10,11 @@ import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms'
 export class RegisterComponent implements OnInit {
 
   public signUpForm: FormGroup;
-  constructor(private fb: FormBuilder) {
+  is_click: boolean;
+  constructor(private fb: FormBuilder,public router:Router,public authService:MyAuthService) {
       this.signUpForm = this.fb.group({
-        email:['mustafa05deniz@gmail.com',[Validators.email,Validators.required]],
+        name:['demo',Validators.required],
+        email:['demo@demo.com',[Validators.email,Validators.required]],
         password:['123456789',Validators.required],
         rePassword:['123456789',Validators.required]
 
@@ -21,7 +25,19 @@ export class RegisterComponent implements OnInit {
   }
 
   signUp(){
-    console.log(this.signUpForm.value);
+    alert("closed")
+    /*
+    this.authService.register(this.signUpForm.value.name,this.signUpForm.value.email,this.signUpForm.value.password).then(result=>{
+      console.log(result);
+      localStorage.setItem('token',result['token']);
+      localStorage.setItem('user',JSON.stringify(result));
+      this.router.navigate(['/auth/login'])
+    }).catch(err=>{
+      console.log(err);
+      alert(err['message']);
+      this.is_click=false;
+    })
+    */
   }
 
 }

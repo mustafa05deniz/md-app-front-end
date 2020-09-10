@@ -12,7 +12,7 @@
     <mat-form-field  appearance="outline" floatLabel="always" class="w-100-p">
         <mat-label>Category</mat-label>
         <mat-select placeholder="Cars" formControlName="category">
-            <mat-option *ngFor="let cat of this.category" value="{{cat.id}}">{{cat.name}}</mat-option>
+            <mat-option *ngFor="let cat of this.categories" value="{{cat.name}}">{{cat.name}}</mat-option>
 
         </mat-select>
     </mat-form-field>

@@ -1,1 +1,30 @@
-<p>post works!</p>
+
+<main *ngIf="show_single_post" role="main" class="container" >
+  <div class="row">
+    <div class="col-md-8 blog-main">
+      <h3 class="pb-4 mb-4 font-italic border-bottom">
+        {{this.post.title}}
+      </h3>
+
+      <div class="blog-post">
+        <h2 class="blog-post-title"></h2>
+        <p class="blog-post-meta">{{this.post.createdDate}}</p>
+        <p [innerHTML]="this.post.text">
+        </p>
+      </div>
+    </div>
+
+    <aside class="col-md-4 blog-sidebar">
+      <div class="p-4">
+        <h4 class="font-italic">Archives</h4>
+        <ol class="list-unstyled mb-0" *ngIf="show_post">
+          <li *ngFor="let post_l of posts;let i=index"><a href="/blog/post/{{post_l._id}}" >{{post_l.title}}</a></li>
+
+        </ol>
+      </div>
+
+    </aside>
+
+  </div>
+
+</main>

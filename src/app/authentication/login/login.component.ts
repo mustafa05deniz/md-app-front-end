@@ -13,7 +13,7 @@ export class LoginComponent implements OnInit {
   public is_click:Boolean=false;
   constructor(private fb: FormBuilder,public router:Router,public authService:MyAuthService) {
       this.loginForm = this.fb.group({
-        email:['mustafa05deniz@gmail.com',[Validators.email,Validators.required]],
+        email:['demo@demo.com',[Validators.email,Validators.required]],
         password:['123456789',Validators.required]
       })
   }

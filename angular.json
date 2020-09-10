@@ -17,6 +17,9 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": [
+              "lodash","devextreme"
+            ],
             "outputPath": "dist/md-app",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -38,7 +41,6 @@
               "./node_modules/jquery/dist/jquery.min.js",
               "./node_modules/popper.js/dist/umd/popper.min.js",
               "./node_modules/bootstrap/dist/js/bootstrap.min.js",
-             
               "./src/assets/js/md.js"
             ]
           },

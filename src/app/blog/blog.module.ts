@@ -17,15 +17,23 @@ import { HeaderComponent } from './layout/header/header.component';
 import { CategoriesComponent } from './layout/categories/categories.component';
 import { SliderComponent } from './layout/slider/slider.component';
 import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
+import { SingleComponent } from './list/single/single.component';
 const routes: Routes = [
     {
         path: '',
         component: BlogComponent,
+        children:[
+            {
+                path: 'list',
+                component: ListComponent,
+            },
+            {
+                path: 'post/:id',
+                component: PostComponent,
+            },
+        ]
     },
-    {
-        path: 'post',
-        component: PostComponent,
-    }
+    
 ];
 
 
@@ -36,7 +44,8 @@ const routes: Routes = [
         ListComponent,
         HeaderComponent,
         CategoriesComponent,
-        SliderComponent
+        SliderComponent,
+        SingleComponent
     ],
     imports: [
         NgxSkeletonLoaderModule,

@@ -8,11 +8,13 @@
             <dxo-pager [showPageSizeSelector]="true" [allowedPageSizes]="[5, 10, 20]" [showInfo]="true">
             </dxo-pager>
             <dxo-filter-row [visible]="true"></dxo-filter-row>
-            <dxi-column dataField="title" caption="Title"></dxi-column>
-            <dxi-column dataField="text" caption="Text"></dxi-column>
+            <dxi-column dataField="title"  caption="Title"></dxi-column>
+            <dxi-column cellTemplate="text" caption="Text"></dxi-column>
             <dxi-column dataField="summary"  caption="Summary"></dxi-column>
-            <dxi-column cellTemplate="img" caption="IMG"></dxi-column>
-          
+            <dxi-column cellTemplate="img"   caption="IMG"></dxi-column>
+            <div *dxTemplate="let data of 'text'">
+                <div [innerHTML]="data.data.text"></div>
+             </div>
             <div *dxTemplate="let data of 'img'">
                <img src="{{data.data.img}}">
             </div>

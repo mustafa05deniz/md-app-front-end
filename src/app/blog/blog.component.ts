@@ -12,21 +12,6 @@ export class BlogComponent implements OnInit {
   public blog_title = "MD Blog"
   public categories: Category[];
 
-  /*
-
-  [
-    { id: 1, name: "Software" },
-    { id: 2, name: "world" },
-    { id: 3, name: "TR" },
-    { id: 4, name: "Technology" },
-    { id: 5, name: "Desing" },
-    { id: 6, name: "Culture" },
-    { id: 7, name: "Science" },
-    { id: 8, name: "Travel" },
-    { id: 9, name: "Style" },
-    { id: 10, name: "Healt" },
-  ]
-  */
   public posts: Posts[];
 
   last_post: Posts;

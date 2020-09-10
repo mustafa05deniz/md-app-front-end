@@ -24,7 +24,11 @@ export class BlogService {
     })
 
   }
-
+  SinglePost(data): Observable<Posts[]> {
+    return this.crud_service.post_with_json('/posts/single',data).pipe(map(response => {
+      return response['data']
+    }))
+  }
 
   postList(): Observable<Posts[]> {
     return this.crud_service.get('/posts/postList').pipe(map(response => {
