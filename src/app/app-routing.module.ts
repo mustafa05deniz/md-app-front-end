@@ -7,7 +7,7 @@ const routes: Routes = [
 
   {
     path: '',
-    redirectTo: 'blog/list',
+    redirectTo: 'blog/list/all',
     pathMatch: 'full'
   },
 

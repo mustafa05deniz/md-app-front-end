@@ -1,6 +1,5 @@
 <div class="nav-scroller py-1 mb-2">
     <nav class="nav d-flex justify-content-between">
-        <a *ngFor="let category of categories;let i=index;" class="p-2 text-muted" >{{category.name}}</a>
-
+        <a *ngFor="let category of categories;let i=index;" href="/blog/list/{{category.name}}" class="p-2 text-muted" >{{category.name}}</a>
     </nav>
 </div>

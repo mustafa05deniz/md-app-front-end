@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { BlogService } from '../blog.service';
 import { Posts } from '../posts';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-list',
@@ -13,10 +14,13 @@ export class ListComponent implements OnInit {
   show_slider: boolean;
   public posts: Posts[];
   last_post: Posts;
-  constructor(public blogService: BlogService) { }
+  category: string;
+  constructor(public blogService: BlogService,public router:Router,public route:ActivatedRoute) { }
 
   async ngOnInit() {
-    await this.blogService.postList().subscribe(data => {
+    this.category = this.route.snapshot.paramMap.get('category');
+    console.log(this.category);
+    await this.blogService.postListWithFilter(this.category).subscribe(data => {
       console.log(data);
       if (data.length == 0) {
         console.log("ss")

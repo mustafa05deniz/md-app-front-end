@@ -35,6 +35,11 @@ export class BlogService {
       return response['data']
     }))
   }
+  postListWithFilter(category): Observable<Posts[]> {
+    return this.crud_service.post_with_json('/posts/postWithCategory',{category:category}).pipe(map(response => {
+      return response['data']
+    }))
+  }
   categoryList(): Observable<Category[]> {
     return this.crud_service.get('/category/categoryList').pipe(map(response => {
       return response['data']

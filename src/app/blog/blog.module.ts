@@ -24,7 +24,7 @@ const routes: Routes = [
         component: BlogComponent,
         children:[
             {
-                path: 'list',
+                path: 'list/:category',
                 component: ListComponent,
             },
             {
