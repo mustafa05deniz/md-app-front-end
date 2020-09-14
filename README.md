@@ -1,27 +1,64 @@
-# MdApp
+<p style="text-align: justify;"><span style="font-size: 19px;">Admin Dashboard &amp; Blog App &nbsp;, Angular10,ExpressJS,MongoDB&nbsp;</span></p>
+<p style="text-align: justify;"><span style="font-size: 19px;">Demo : <a href="https://md-app-front-end.herokuapp.com/login">https://md-app-front-end.herokuapp.com/login</a></span></p>
+<p style="text-align: justify;"><span style="font-size: 19px;">user : <a href="mailto:demo@demo.com">demo@demo.com</a></span></p>
+<p style="text-align: justify;"><span style="font-size: 19px;">password : 123456789</span></p>
+<ul>
+    <li style="text-align: justify;">authentication<ul>
+            <li style="text-align: justify;">login&nbsp;</li>
+            <li style="text-align: justify;">signup</li>
+        </ul>
+    </li>
+    <li>layout &nbsp; &nbsp;<ul>
+            <li>header</li>
+            <li>sidebar</li>
+        </ul>
+    </li>
+    <li>pages<ul>
+            <li>dashboard</li>
+            <li>home</li>
+            <li>post</li>
+            <li>profile</li>
+            <li>users</li>
+            <li>categories</li>
+        </ul>
+    </li>
+    <li>services<ul>
+            <li>crud services - get , post , delete , update</li>
+            <li>profile services get,update</li>
+            <li>post services add , update , get , list ,delete</li>
+            <li>users services add , update , get , list , delete&nbsp;</li>
+            <li>categories service add , update , get ,list ,delete</li>
+        </ul>
+    </li>
+    <li>ngx charts</li>
+    <li>devextreme&nbsp;</li>
+    <li>ngx-skeleton</li>
+    <li>ngx-editor</li>
+    <li>lodash,mongoose</li>
+    <li>jwt token paswword</li>
+</ul>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.4.
+# Installation 
 
-## Development server
+download this repository https://github.com/mustafa05deniz/md-blog-backend and run npm install
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+# MD BLOG APP
+<img src="https://github.com/mustafa05deniz/md-app-front-end/blob/master/mdblogapp%20.jpg">
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# Admin Page
+<img src="https://github.com/mustafa05deniz/md-app-front-end/blob/master/admin.PNG">
 
-## Build
+# Blog Page
+<img src="https://github.com/mustafa05deniz/md-app-front-end/blob/master/blog.PNG">
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+# Theme Setting Page
+<img src="https://github.com/mustafa05deniz/md-app-front-end/blob/master/theme%20settings.PNG">
 
-## Running unit tests
+# Login
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+<img src="https://github.com/mustafa05deniz/md-app-front-end/blob/master/login.PNG">
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+# Signup
+  <img src="https://github.com/mustafa05deniz/md-app-front-end/blob/master/signup.PNG">
+  
